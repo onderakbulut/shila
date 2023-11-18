@@ -1,0 +1,9 @@
+.header {
+    @apply bg-red-500;
+    .box {
+        @apply w-[250px] h-[250px] border mt-[50px];
+        &.bg-red {
+            @apply bg-[red];
+        }
+    }
+}
