@@ -13,25 +13,25 @@
   padding-top: 3rem;
   position: absolute;
   right: 0;
-  top: 100%;
+  z-index: 1;
+  top: calc(100% - 1px);
 }
 
 .shopify-section-header-sticky .mega-menu__content {
   max-height: calc(100vh - var(--header-bottom-position-desktop, 20rem) - 4rem);
 }
 
-.header-wrapper--border-bottom .mega-menu__content {
-  border-top: 0;
-}
-
-.js .mega-menu__content {
+.mega-menu__content {
   opacity: 0;
   transform: translateY(-1.5rem);
+  visibility: hidden;
 }
 
-.mega-menu[open] .mega-menu__content {
+.mega-menu[open] .mega-menu__content,
+.mega-menu:hover .mega-menu__content {
   opacity: 1;
   transform: translateY(0);
+  visibility: visible;
 }
 
 .mega-menu__list {
