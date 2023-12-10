@@ -2562,11 +2562,18 @@ product-info .loading__spinner:not(.hidden) ~ *,
   vertical-align: middle;
 }
 
-.header__icon,
-.header__icon--cart .icon {
+.header__icon {
   height: 4.4rem;
   width: 4.4rem;
   padding: 0;
+}
+.header__icon--account .icon {
+  width: 28px;
+  height: 28px;
+} 
+.header__icon--cart .icon {
+  height: 22px;
+  width: 24px;
 }
 
 .header__icon--cart {
@@ -2794,34 +2801,34 @@ details[open] > .header__submenu {
   padding: 0 1rem;
 }
 
-.header__menu-item {
+.header__menu-link {
   padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
 }
 
-.header__menu-item:hover {
+.header__menu-link:hover {
   color: rgb(var(--color-foreground));
 }
 
-.header__menu-item span {
+.header__menu-link span {
   transition: text-decoration var(--duration-short) ease;
 }
 
-.header__menu-item:hover span {
+.header__menu-link:hover span {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
 
-details[open] > .header__menu-item {
+details[open] > .header__menu-link {
   text-decoration: underline;
 }
 
-details[open]:hover > .header__menu-item {
+details[open]:hover > .header__menu-link {
   text-decoration-thickness: 0.2rem;
 }
 
-details[open] > .header__menu-item .icon-caret {
+details[open] > .header__menu-link .icon-caret {
   transform: rotate(180deg);
 }
 
@@ -2832,7 +2839,7 @@ details[open] > .header__menu-item .icon-caret {
   text-underline-offset: 0.3rem;
 }
 
-.header__menu-item:hover .header__active-menu-item {
+.header__menu-link:hover .header__active-menu-item {
   text-decoration-thickness: 0.2rem;
 }
 
@@ -2861,20 +2868,20 @@ details[open] > .header__menu-item .icon-caret {
   margin: 1rem 0;
 }
 
-.header__submenu .header__menu-item:after {
+.header__submenu .header__menu-link:after {
   right: 2rem;
 }
 
-.header__submenu .header__menu-item {
+.header__submenu .header__menu-link {
   justify-content: space-between;
   padding: 0.8rem 2rem;
 }
 
-.header__submenu .header__menu-item:hover {
+.header__submenu .header__menu-link:hover {
   text-decoration-line: underline;
 }
 
-.header__menu-item .icon-caret {
+.header__menu-link .icon-caret {
   right: 0.8rem;
 }
 
