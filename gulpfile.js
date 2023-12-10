@@ -39,5 +39,5 @@ gulp.task('prod', function () {
 // gulp watch
 // Starts watcher and keeps compiling the css file as you make changes
 gulp.task('watch', function () {
-    gulp.watch(["./sass/*.scss", "./*.html", "./**/*.liquid"], gulp.series('prod'));
+    gulp.watch(["./sass/*.scss", "./*.html", "./sections/*.liquid"], gulp.series('prod'));
 });
