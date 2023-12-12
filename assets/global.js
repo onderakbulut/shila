@@ -348,7 +348,7 @@ class MenuDrawer extends HTMLElement {
   constructor() {
     super();
 
-    this.mainDetailsToggle = this.querySelector('details');
+    this.mainDetailsToggle = this.querySelector('details') || null;
 
     this.addEventListener('keyup', this.onKeyUp.bind(this));
     this.addEventListener('focusout', this.onFocusOut.bind(this));
