@@ -481,4 +481,7 @@
   .banner--desktop-transparent .rte a:hover {
     color: currentColor;
   }
+  .banner__box > * + .banner__buttons {
+    margin-top: 70px;
+  }
 }

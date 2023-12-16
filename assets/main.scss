@@ -320,6 +320,7 @@ img,
 svg,
 video,
 iframe,
+embed,
 object {
   display: block; /* 1 */
   vertical-align: middle; /* 2 */
@@ -439,22 +440,5 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.tw-bg-iron {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 221 223 / var(--tw-bg-opacity));
-}
-.tw-bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.tw-text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-.tw-text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 
-@media (prefers-color-scheme: dark) {
-}
+
