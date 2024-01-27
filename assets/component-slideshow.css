@@ -119,7 +119,7 @@ slideshow-component .slideshow.banner {
 @media screen and (min-width: 750px) {
   .slideshow__controls {
     position: relative;
-    margin-top: 50px;
+    margin-top: 34px;
   }
 }
 

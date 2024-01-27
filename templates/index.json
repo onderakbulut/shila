@@ -7,11 +7,10 @@
           "type": "slide",
           "settings": {
             "heading": "New collection",
-            "heading_size": "h1",
+            "heading_size": "h5",
             "subheading": "",
             "button_label": "Button label",
             "link": "",
-            "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": true,
             "text_alignment": "center",
@@ -23,11 +22,10 @@
           "type": "slide",
           "settings": {
             "heading": "Image slide",
-            "heading_size": "h1",
+            "heading_size": "h5",
             "subheading": "Tell your brand's story through images",
             "button_label": "Button label",
             "link": "",
-            "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": true,
             "text_alignment": "center",
@@ -49,6 +47,48 @@
         "image_behavior": "ambient",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "collage_NRbh4p": {
+      "type": "collage",
+      "blocks": {
+        "image_mKBaBk": {
+          "type": "image",
+          "settings": {
+            "heading": "New Textures",
+            "link": ""
+          }
+        },
+        "collection_Pj7krc": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "image_Qejczq": {
+          "type": "image",
+          "settings": {
+            "heading": "New Textures",
+            "link": ""
+          }
+        },
+        "video_jd9Trg": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "Describe the video",
+            "heading": "New Video"
+          }
+        }
+      },
+      "block_order": [
+        "image_mKBaBk",
+        "collection_Pj7krc",
+        "image_Qejczq",
+        "video_jd9Trg"
+      ],
+      "settings": {
+        "color_scheme": ""
       }
     },
     "rich_text": {
@@ -108,46 +148,6 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -223,9 +223,9 @@
   },
   "order": [
     "5ce8bd68-c747-494d-9de7-ca935060df43",
+    "collage_NRbh4p",
     "rich_text",
     "featured_collection",
-    "collage",
     "video",
     "multicolumn"
   ]

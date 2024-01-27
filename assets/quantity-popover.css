@@ -8,7 +8,6 @@ quantity-popover volume-pricing li:nth-child(odd) {
 }
 
 quantity-popover volume-pricing li {
-  font-size: 1.4rem;
   letter-spacing: 0.06rem;
   padding: 0.6rem 0.8rem;
   display: flex;
@@ -77,7 +76,6 @@ quantity-popover quick-order-list-remove-button .button {
   display: block;
   margin-left: 1.2rem;
   margin-top: 1.2rem;
-  font-size: 1.2rem;
 }
 
 .quantity-popover__info .button {

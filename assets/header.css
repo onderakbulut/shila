@@ -7,11 +7,18 @@
         padding-top: 0px;
         padding-bottom: 0px
     }
-    .header__menu-item:not(:last-child) {
-        margin-right: 2rem
-    }
+}
+.header__menu-link {
+    transition-duration: 300ms
+}
+@media (min-width: 990px) {
     .header__menu-link {
         padding-top: 4rem;
         padding-bottom: 4rem
     }
+}
+
+.shopify-section-header-sticky .header__menu-link {
+    padding-top: 2rem;
+    padding-bottom: 2rem
 }

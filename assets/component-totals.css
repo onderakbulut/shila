@@ -5,12 +5,10 @@
 }
 
 .totals > * {
-  font-size: 1.6rem;
   margin: 0;
 }
 
 .totals > h2 {
-  font-size: calc(var(--font-heading-scale) * 1.6rem);
 }
 
 .totals * {
@@ -26,7 +24,6 @@
 }
 
 .totals__total-value {
-  font-size: 1.8rem;
 }
 
 .cart__ctas + .totals {

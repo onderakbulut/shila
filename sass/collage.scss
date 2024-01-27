@@ -1,0 +1,59 @@
+.collage {
+    $self: &;
+    @apply tw-grid tw-gap-4 tw-pt-4;
+    @apply md:tw-gap-7 md:tw-grid-cols-4 md:tw-grid-rows-2 md:tw-pt-9;
+    &__item:first-child {
+        @apply tw-row-span-2 tw-col-span-2;
+    } 
+    &__item:nth-of-type(4n-1){
+        @apply tw-row-span-2;
+    }
+    &__item:nth-of-type(3){
+        #{ $self }__inner {
+            @apply tw-h-full;
+            .media {
+                @apply tw-h-full;
+            }
+        }
+        #{ $self }__image {
+            @apply tw-h-full;
+        }
+    }
+    &__inner {
+        @apply tw-relative;
+        &--grid {
+            @apply tw-grid tw-w-full tw-absolute tw-inset-0;
+            grid-template-rows: 1fr auto 1fr;
+        }
+        :hover {
+            .icon-arrow {
+                @apply tw-w-7;
+            }
+            .icon-play {
+                @apply tw-w-5;
+            }
+        }
+    }
+    &__heading {
+        @apply tw-text-xl tw-text-white tw-font-semibold tw-row-start-2 tw-text-center;
+        @apply md:tw-text-4xl;
+    }
+    &__link {
+        @apply tw-row-start-3 tw-w-10 tw-h-10 tw-rounded-full tw-bg-white tw-flex tw-items-center tw-justify-center tw-ms-auto tw-mt-auto tw-mr-[10px] tw-mb-[10px];
+        @apply xl:tw-w-20 xl:tw-h-20 xl:tw-mr-5 xl:tw-mb-5;
+        .icon-arrow {
+            @apply tw-w-4;
+            @apply xl:tw-w-6;
+        }
+        .icon-play {
+            @apply tw-w-3;
+            @apply xl:tw-w-4;
+        }
+        .icon {
+            @apply tw-duration-200;
+        }
+    }
+    &__image.ratio > * {
+        @apply tw-absolute tw-inset-0 tw-object-cover tw-object-center tw-w-full tw-h-full;    
+    }
+}
