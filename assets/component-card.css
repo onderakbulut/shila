@@ -197,7 +197,6 @@
 .card--horizontal .card__heading,
 .card--horizontal .price__container .price-item,
 .card--horizontal__quick-add {
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
 }
 
 .card--horizontal .card-information>*:not(.visually-hidden:first-child)+*:not(.rating):not(.card__information-volume-pricing-note) {
@@ -213,7 +212,6 @@
   .card--horizontal .card__heading,
   .card--horizontal .price__container .price-item,
   .card--horizontal__quick-add {
-    font-size: calc(var(--font-heading-scale) * 1.3rem);
   }
 }
 
