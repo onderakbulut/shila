@@ -30,7 +30,8 @@ gulp.task('prod', function() {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(purgecss({
-        content: ['./*.html',"./**/*.liquid","./assets/*.js"],        
+        content: ['./*.html',"./**/*.liquid","./assets/*.js", "./sass/*.scss"],        
+        safelist: [/^swiper-/],
         defaultExtractor: content => {
             const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
             const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || []

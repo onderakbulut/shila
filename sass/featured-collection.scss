@@ -1,0 +1,29 @@
+
+.featured-collection {
+    &__title {
+        @apply tw-text-3xl tw-font-bold tw-text-center tw-mb-3; 
+        @apply lg:tw-text-4xl tw-mb-8;
+    }
+    tab-menu {
+        @apply tw-flex tw-justify-center tw-gap-x-6 tw-mb-12;
+        .tab-menu__item {
+            @apply tw-text-gray tw-px-1 tw-py-2 tw-cursor-pointer;
+            &.-active {
+                @apply tw-text-black tw-border-b-2 tw-border-black tw-underline-offset-4;
+            }
+        }
+    }
+    .swiper:not(.swiper-initialized) {
+        @apply tw-hidden
+    }
+    .swiper-pagination {
+        @apply tw-relative tw-mt-11 tw-flex tw-justify-center;
+        &-bullet {
+            @apply tw-w-10 tw-h-2 tw-rounded-none tw-border-t-2 tw-border-alto tw-opacity-100 tw-block;
+            @apply tw-mx-2 tw-bg-transparent #{!important};
+            &.swiper-pagination-bullet-active {
+                @apply tw-border-black;
+            }
+        }
+    }
+}

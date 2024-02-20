@@ -11,7 +11,7 @@
   box-sizing: border-box; /* 1 */
   border-width: 0; /* 2 */
   border-style: solid; /* 2 */
-  border-color: #e5e7eb; /* 2 */
+  border-color: currentColor; /* 2 */
 }
 
 ::before,
@@ -92,7 +92,7 @@ a {
 Add the correct font weight in Edge and Safari.
 */
 
-
+b,
 strong {
   font-weight: bolder;
 }
@@ -186,6 +186,10 @@ Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/
 /*
 Add the correct vertical alignment in Chrome and Firefox.
 */
+
+progress {
+  vertical-align: baseline;
+}
 
 /*
 Correct the cursor style of increment and decrement buttons in Safari.
@@ -321,7 +325,9 @@ Make sure disabled buttons don't get the pointer cursor.
 img,
 svg,
 video,
+audio,
 iframe,
+embed,
 object {
   display: block; /* 1 */
   vertical-align: middle; /* 2 */
