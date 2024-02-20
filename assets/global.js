@@ -1269,3 +1269,218 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+class TabMenu extends HTMLElement {
+  menuItems
+  menuContents
+
+  constructor () {
+    super()
+    this.activeClass = '-active'
+  }
+
+  get namespace () {
+    return this.getAttribute('namespace')
+  }
+
+  connectedCallback () {
+    this.menuItems = this.querySelectorAll(`[namespace="${this.namespace}"] tab-menu-item`)
+    this.menuContents = document.querySelectorAll(`[namespace="${this.namespace}"] tab-content-item`)
+
+    this.menuContents.forEach((menuContent) => {
+      menuContent.setAttribute('hidden', 'hidden')
+    })
+
+    this.menuItems.forEach((menuItem) => {
+      menuItem.classList.add('tab-menu__item')
+
+      if (menuItem.hasAttribute('active')) {
+        const contentAttr = menuItem.getAttribute('content')
+        const menuContent = document.querySelector(`[namespace="${this.namespace}"] tab-content-item[tab="${contentAttr}"]`)
+
+        menuItem.classList.add(this.activeClass)
+        menuItem.removeAttribute('hidden')
+
+        menuContent.classList.add(this.activeClass)
+        menuContent.removeAttribute('hidden')
+      }
+
+      menuItem.addEventListener('click', (e) => this.toggleTabs(e))
+    })
+  }
+
+  toggleTabs (e) {
+    e.preventDefault()
+
+    const contentAttr = e.currentTarget.getAttribute('content')
+    const targetContent = document.querySelector(`[namespace="${this.namespace}"] tab-content-item[tab="${contentAttr}"]`)
+
+    this.menuItems.forEach((menuItem) => menuItem.classList.remove(this.activeClass))
+    e.currentTarget.classList.add(this.activeClass)
+    this.menuContents.forEach((menuContent) => {
+      menuContent.setAttribute('hidden', 'hidden')
+      menuContent.classList.remove(this.activeClass)
+    })
+
+    targetContent.removeAttribute('hidden')
+    targetContent.classList.add(this.activeClass)
+  }
+}
+
+customElements.define('tab-menu', TabMenu)
+
+class SwiperContainer extends HTMLElement {
+  defaultOptions;
+  constructor() {
+      super();
+
+      this.defaultOptions = {
+          loop: false,
+          autoplay: false,
+          spaceBetween: '0',
+          navigation: false,
+          slidesPerView: 1,
+          pagination: false,
+          centeredSlides: false,
+          direction: 'horizontal',
+          loopedSlides: 1,
+          slideToClickedSlide: false,
+          thumbs: false,
+          watchSlidesProgress: false,
+          breakpoints: false,
+          slidesPerGroup : 1
+      };
+
+      this.init();
+
+  }
+
+  init = () => {
+      let el = this.querySelector('.swiper');
+      let options = this.getOptions();
+
+      var swiper = new Swiper(el, options)
+
+      if (this.querySelector('[data-fancybox]')) {
+          window.Fancybox.bind('[data-fancybox]', {
+              Images: {
+                  zoom: false
+              },
+              Toolbar: {
+                  display: {
+                      left: ['infobar'],
+                      middle: [
+                          'zoomIn',
+                          'zoomOut'
+                      ],
+                      right: ['fullscreen', 'thumbs', 'close', 'counter']
+                  }
+              },
+              Thumbs: {
+                  type: 'classic'
+              },
+              on: {
+                  close: (fancybox, slide) => {
+                      const index = fancybox.getSlide().index
+                      swiper.slideToLoop(index)
+                  }
+              }
+          })
+
+      }
+  }
+  getOptions = () => {
+      let options = {};
+      for (let key in this.defaultOptions) {
+          let value = this.getAttribute(this.camelCaseToKebabCase(key));
+          if (value !== null) {
+
+
+              if (key == 'navigation' && value === 'true') {
+                  options[key] = {
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                  };
+              }
+      else if(key == 'pagination' && value === 'true'){
+        options[key] = {
+          el: '.swiper-pagination',
+          clickable: true,
+        };
+      }
+              else if (key == 'thumbs') {
+                  options[key] = {
+                      swiper: document.querySelector(value).querySelector('.swiper'),
+                  };
+              }
+              else if (key == 'breakpoints') {
+                  let breakpoints = {}
+                  this.breakpoints = Array.from(this.querySelectorAll('breakpoint'))
+                      .filter((item) => item.nodeName.toLowerCase() === 'breakpoint')
+                      .map((breakpoint) => {
+                          let subOptions = {};
+                          for (let subKey in this.defaultOptions) {
+                              let value = breakpoint.getAttribute(this.camelCaseToKebabCase(subKey));
+
+                              if (value !== null) {
+                                  if (typeof this.defaultOptions[subKey] === 'boolean') {
+                                      if (typeof value === 'undefined') {
+                                          subOptions[subKey] = false;
+                                      } else {
+                                          subOptions[subKey] = (!(String(value).toLowerCase() === 'false') || value === '');
+                                      }
+                                  }
+                                  else if (typeof this.defaultOptions[subKey] === 'number') {
+                                      subOptions[subKey] = parseFloat(value);
+                                  }
+                                  else {
+                                      subOptions[subKey] = value;
+                                  }
+                              }
+                          }
+                          let size = breakpoint.getAttribute('size');
+                          breakpoints[size] = subOptions;
+                      });
+
+                  options[key] = breakpoints;
+
+              }
+              else if (typeof this.defaultOptions[key] === 'boolean') {
+                  if (typeof value === 'undefined') {
+                      options[key] = false;
+                  } else {
+                      options[key] = (!(String(value).toLowerCase() === 'false') || value === '');
+                  }
+              }
+              else if (typeof this.defaultOptions[key] === 'number') {
+                  options[key] = parseFloat(value);
+              }
+              else {
+                  options[key] = value;
+              }
+          }
+      }
+      console.log(options);
+      return options;
+  }
+
+  camelCaseToKebabCase = (str) => str
+      .split('')
+      .map((letter, index) => (letter.toUpperCase() === letter
+          ? `${index === 0 ? '' : '-'}${letter.toLowerCase()}`
+          : letter))
+      .join('');
+}
+customElements.define('swiper-container', SwiperContainer);
+
+
+
+if (document.querySelector('.js-image-zoom')) {
+  document.querySelectorAll('.js-image-zoom').forEach((item) => {
+      new Drift(item, {
+          paneContainer: item,
+          zoomFactor: 2,
+          sourceAttribute: 'data-src',
+      });
+  });
+}

@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       colors: {
         'iron': '#DCDDDF',
+        'gray': '#808080',
+        'alto': '#D9D9D9',
       },
     },
     container: {
