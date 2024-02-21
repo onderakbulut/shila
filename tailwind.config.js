@@ -9,6 +9,7 @@ module.exports = {
         'iron': '#DCDDDF',
         'gray': '#808080',
         'alto': '#D9D9D9',
+        'romantic': '#FFD2C1',
       },
     },
     container: {

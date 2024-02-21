@@ -1,0 +1,28 @@
+.subscription {
+    @apply tw-bg-romantic tw-pt-9 tw-pb-11 tw-px-2;
+    @apply lg:tw-pt-[55px] lg:tw-pb-[60px];
+    &__title {
+        @apply tw-text-3xl tw-font-semibold tw-mb-5 tw-text-center tw-text-black;
+        @apply lg:tw-text-4xl lg:tw-mb-11;
+    }
+    &-form {
+        @apply tw-flex tw-justify-center;
+        &__wrapper {
+            @apply tw-bg-white tw-flex tw-justify-between tw-rounded-tr-full tw-rounded-br-full;
+            @apply lg:tw-max-w-[376px];
+        }
+        &__input {
+            @apply tw-py-[18px] tw-px-4;
+            &:focus-visible {
+                @apply tw-outline-none tw-shadow-none;
+            }
+        }
+        &__button {
+            @apply tw-w-[60px] tw-h-[60px] tw-rounded-full tw-bg-black tw-text-white;
+            @apply tw-flex tw-items-center tw-justify-center;
+        }
+        &__message {
+            @apply tw-flex tw-justify-center;
+        }
+    }
+}
