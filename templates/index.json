@@ -143,12 +143,21 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
+    },
+    "subscribe_7kmrQV": {
+      "type": "subscribe",
+      "settings": {
+        "title": "Subscribe and Get 15% Off",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "5ce8bd68-c747-494d-9de7-ca935060df43",
     "collage_NRbh4p",
     "rich_text_XeBNXX",
-    "featured_collection"
+    "featured_collection",
+    "subscribe_7kmrQV"
   ]
 }
