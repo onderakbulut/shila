@@ -8,8 +8,9 @@ module.exports = {
       colors: {
         'iron': '#DCDDDF',
         'gray': '#808080',
+        'gray-100': '#F2F2F2',
         'alto': '#D9D9D9',
-        'romantic': '#FFD2C1',
+        'romantic': '#FFD2C1',        
       },
     },
     container: {
