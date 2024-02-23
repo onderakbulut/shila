@@ -1,0 +1,17 @@
+.footer {
+    @apply tw-border-t tw-border-gray-100;
+    @apply tw-pt-8;
+    @apply lg:tw-pt-10;
+    &__copyright {
+        @apply tw-py-6 tw-bg-gray-100 tw-text-center tw-text-sm;
+    }
+    &__menu,
+    &__social {
+        @apply tw-flex tw-justify-center tw-gap-x-3;
+        @apply lg:tw-gap-x-10;
+    }
+    &__social {
+        @apply tw-font-semibold tw-mt-7 tw-mb-9;
+        @apply lg:tw-mt-10 lg:tw-mb-11;
+    }
+}
