@@ -1,7 +1,7 @@
 {{ 'featured-collection.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width section-{{ section.id }}-padding">
-    <div class="featured-collection">
+    <div class="featured-collection {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <h2 class="featured-collection__title">{{ section.settings.title }}</h2>
         <div class="featured-collection__tab">
             <tab-menu namespace="tab">

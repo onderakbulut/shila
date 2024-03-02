@@ -7,7 +7,7 @@ margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
 }
 {%- endstyle -%}
 
-<footer class="footer">
+<footer class="footer {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     {%- for block in section.blocks -%}
         {%- case block.type -%}
             {%- when '@app' -%}

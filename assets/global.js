@@ -1348,7 +1348,8 @@ class SwiperContainer extends HTMLElement {
           thumbs: false,
           watchSlidesProgress: false,
           breakpoints: false,
-          slidesPerGroup : 1
+          slidesPerGroup : 1,
+          delay : 2000,
       };
 
       this.init();
@@ -1412,6 +1413,10 @@ class SwiperContainer extends HTMLElement {
                   options[key] = {
                       swiper: document.querySelector(value).querySelector('.swiper'),
                   };
+              }
+              else if (key == 'delay') {
+                  if(options['autoplay'])
+                  options['autoplay'] = { delay: value}
               }
               else if (key == 'breakpoints') {
                   let breakpoints = {}

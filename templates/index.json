@@ -6,13 +6,13 @@
         "template--21778208522547__5ce8bd68-c747-494d-9de7-ca935060df43-slide-1": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/banner-1_e4c3aae1-ea30-4d4f-b391-7ad08275eada.jpg",
             "heading": "New collection",
             "heading_size": "h5",
             "subheading": "",
-            "button_label": "Button label",
-            "link": "",
-            "box_align": "middle-center",
-            "show_text_box": true,
+            "button_label": "Shop Now",
+            "link": "\/",
+            "box_align": "bottom-center",
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
@@ -27,7 +27,6 @@
             "button_label": "Button label",
             "link": "",
             "box_align": "middle-center",
-            "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
@@ -40,11 +39,9 @@
       ],
       "settings": {
         "layout": "grid",
-        "slide_height": "large",
-        "slider_visual": "dots",
+        "slide_height": "medium",
         "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "ambient",
+        "change_slides_speed": 3,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
@@ -55,6 +52,7 @@
         "image_mKBaBk": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/left-banner_14756f95-cb63-4998-b2b8-77d39540e0dd.jpg",
             "heading": "New Textures",
             "link": ""
           }
@@ -62,12 +60,13 @@
         "collection_Pj7krc": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "babies"
           }
         },
         "image_Qejczq": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/right-banner_07c18c2d-a797-48a1-8ce0-64621980384b.jpg",
             "heading": "New Textures",
             "link": ""
           }
@@ -75,6 +74,7 @@
         "video_jd9Trg": {
           "type": "video",
           "settings": {
+            "cover_image": "shopify:\/\/shop_images\/video-cover.webp",
             "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
             "description": "Describe the video",
             "heading": "New Video"

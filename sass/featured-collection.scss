@@ -19,10 +19,15 @@
     .swiper-pagination {
         @apply tw-relative tw-mt-11 tw-flex tw-justify-center;
         &-bullet {
-            @apply tw-w-10 tw-h-2 tw-rounded-none tw-border-t-2 tw-border-alto tw-opacity-100 tw-block;
+            @apply tw-w-10 tw-h-4 tw-rounded-none tw-opacity-100 tw-block tw-relative;
             @apply tw-mx-2 tw-bg-transparent #{!important};
-            &.swiper-pagination-bullet-active {
-                @apply tw-border-black;
+            &::after {
+                @apply tw-content-[""] tw-w-full tw-h-1 tw-bg-alto tw-block tw-absolute tw-top-[calc(50%-2px)];
+            }
+            &-active {
+                &::after {
+                    @apply tw-bg-black;
+                }
             }
         }
     }
