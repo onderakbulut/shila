@@ -1,0 +1,22 @@
+.collection-banner__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px
+}
+@media (min-width: 990px) {
+    .collection-banner__inner {
+        min-height: 200px
+    }
+}
+.collection-banner__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600
+}
+@media (min-width: 990px) {
+    .collection-banner__title {
+        font-size: 1.875rem;
+        line-height: 2.25rem
+    }
+}

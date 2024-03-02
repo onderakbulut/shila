@@ -1,0 +1,15 @@
+/*! purgecss start ignore */
+
+.collection-banner {
+    &__inner {
+        @apply tw-flex tw-items-center tw-justify-center;
+        @apply tw-min-h-[100px];
+        @apply lg:tw-min-h-[200px];
+    }
+    &__title {
+        @apply tw-text-2xl tw-font-semibold;
+        @apply lg:tw-text-3xl;
+    }
+}
+
+/*! purgecss end ignore */
