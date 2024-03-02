@@ -1,0 +1,124 @@
+/*! purgecss start ignore */
+.slideshow {
+    & .swiper-slide  {
+        @apply tw-relative;
+    }
+    & .swiper-wrapper {
+        &.-large {
+            @apply tw-h-[600px];
+            @apply lg:tw-h-[800px];
+        }
+        &.-medium {
+            @apply tw-h-[500px];
+            @apply lg:tw-h-[600px];
+        }
+        &.-small {
+            @apply tw-h-[400px];
+            @apply lg:tw-h-[500px];
+        }
+        & svg {
+            @apply tw-w-full tw-h-full;
+        }
+    }
+    .swiper:not(.swiper-initialized) {
+        @apply tw-hidden
+    }
+    .swiper-pagination {
+        @apply tw-relative tw-mt-11 tw-flex tw-justify-center;
+        &-bullet {
+            @apply tw-w-10 tw-h-4 tw-rounded-none tw-opacity-100 tw-block tw-relative;
+            @apply tw-mx-2 tw-bg-transparent #{!important};
+            &::after {
+                @apply tw-content-[""] tw-w-full tw-h-1 tw-bg-alto tw-block tw-absolute tw-top-[calc(50%-2px)];
+            }
+            &-active {
+                &::after {
+                    @apply tw-bg-black;
+                }
+            }
+        }
+    }
+    &__description {
+        @apply tw-absolute tw-inset-0;
+        @apply tw-flex tw-p-4;
+        @apply lg:tw-p-5;
+    }
+    &__inner {
+        @apply tw-inline-block tw-p-3;
+        @apply lg:tw-p-5;
+        &.-left {
+            @apply tw-text-left;
+        }
+        &.-center {
+            @apply tw-text-center;
+        }
+        &.-right {
+            @apply tw-text-right;
+        }
+        &.lg-left {
+            @apply tw-text-left;
+        }
+        &.lg-center {
+            @apply lg:tw-text-center;
+        }
+        &.lg-right {
+            @apply lg:tw-text-right;
+        }
+    }
+    &__middle-center {
+        @apply tw-justify-center tw-items-center;
+    }
+    &__top-center {
+        @apply tw-items-start tw-justify-center;
+    }
+    &__top-right {
+        @apply tw-items-start tw-justify-end;
+    }
+    &__middle-left {
+        @apply tw-items-center;
+    }
+    &__middle-right {
+        @apply tw-items-center tw-justify-end;
+    }
+    &__bottom-left {
+        @apply tw-items-end;
+    }
+    &__bottom-center {
+        @apply tw-items-end tw-justify-center;
+    }
+    &__bottom-right {
+        @apply tw-items-end tw-justify-end;
+    }
+    &__heading {
+        @apply tw-mb-3;
+        &.h4 {
+            @apply tw-text-3xl lg:tw-text-6xl;
+        }
+        &.h5 {
+            @apply tw-text-2xl lg:tw-text-5xl;
+        }
+        &.h6 {
+            @apply tw-text-lg lg:tw-text-4xl;
+        }
+    }
+    &__subheading {
+        @apply tw-text-white;
+    }
+    &__buttons {
+        @apply tw-mt-[86px];
+        & .button {
+            @apply tw-bg-white tw-text-black tw-py-5 tw-px-6;
+        }
+    }
+    &__media {
+        @apply tw-w-full tw-h-full;
+        > img {
+            @apply tw-w-full tw-h-full tw-object-cover;
+        }
+        &::after {
+            @apply tw-content-[""] tw-absolute tw-inset-0 tw-bg-black tw-opacity-0 tw-z-0 tw-w-full tw-h-full;
+        }
+    }
+    
+}
+/*! purgecss end ignore */
