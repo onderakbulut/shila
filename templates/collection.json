@@ -1,5 +1,13 @@
 {
   "sections": {
+    "banner-1": {
+      "type": "collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -26,6 +34,7 @@
     }
   },
   "order": [
+    "banner-1",
     "banner",
     "product-grid"
   ]
