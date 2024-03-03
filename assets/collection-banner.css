@@ -1,5 +1,6 @@
 .collection-banner__inner {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100px
@@ -10,13 +11,14 @@
     }
 }
 .collection-banner__title {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem
 }
 @media (min-width: 990px) {
     .collection-banner__title {
-        font-size: 1.875rem;
-        line-height: 2.25rem
+        font-size: 3rem;
+        line-height: 1
     }
 }
