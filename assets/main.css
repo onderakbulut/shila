@@ -467,8 +467,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 body {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 @media (min-width: 990px) {
 

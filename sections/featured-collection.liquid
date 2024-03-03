@@ -21,7 +21,7 @@
                         <swiper-container loop="true" centered-slides="false" breakpoints="true" pagination="true">
                             <breakpoint size="0" direction="horizontal" space-between="10" slides-per-view="{{ section.settings.columns_mobile }}" slides-per-group="{{ section.settings.columns_mobile }}"></breakpoint>
                             <breakpoint size="900" direction="horizontal" space-between="10" slides-per-view="3"  slides-per-group="3"></breakpoint>
-                            <breakpoint size="1200" direction="horizontal" slides-per-view="{{ section.settings.columns_desktop }}" space-between="30" slides-per-group="{{ section.settings.columns_desktop }}"></breakpoint>
+                            <breakpoint size="1200" direction="horizontal" slides-per-view="{{ section.settings.columns_desktop }}" space-between="20" slides-per-group="{{ section.settings.columns_desktop }}"></breakpoint>
                             <div class="swiper">
                                 <div class="swiper-wrapper">
                                     {%- for product in card_collection.products limit: section.settings.products_to_show -%}

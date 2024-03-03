@@ -6,5 +6,7 @@
     "editor.formatOnSave": false,
     "indentSize": 4,
     "editor.defaultFormatter": "sissel.shopify-liquid",
-  }
+  },
+  // other vscode settings
+  "tailwindCSS.rootFontSize": 10 // <- your root font size here
 }
