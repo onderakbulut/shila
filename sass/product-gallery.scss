@@ -1,0 +1,35 @@
+/*! purgecss start ignore */
+
+.product-left {
+    @apply tw-gap-4 tw-flex tw-flex-col-reverse;
+    @apply xl:tw-flex-row;
+    @apply max-md:tw-mb-[17px];
+}
+.product-thumbs  {
+    @apply xl:tw-w-[95px];
+    .swiper-slide {
+        > img {
+            @apply max-sm:tw-h-[93px];
+            @apply tw-w-full tw-object-cover tw-cursor-pointer tw-border-transparent tw-border-2;
+            @apply tw-h-[108px];
+        }
+        &-thumb-active {
+            > img {
+                @apply tw-border-black;
+            }
+        }
+    }
+    & > div {
+        @apply xl:tw-h-[586px];
+    }
+}
+
+.product-gallery {
+    @apply xl:tw-max-w-[calc(100%-95px)];
+    & .swiper-slide {
+        @apply tw-cursor-pointer;
+    }
+}
+
+
+/*! purgecss end ignore */

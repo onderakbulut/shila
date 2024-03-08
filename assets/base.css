@@ -1623,6 +1623,7 @@ details[open] > .share-button__fallback {
 .select {
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 /* Select */

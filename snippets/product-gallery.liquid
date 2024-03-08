@@ -1,0 +1,39 @@
+<div class="product-left">
+    <swiper-container class="product-thumbs" loop="true" centered-slides="false" slide-to-clicked-slide="true"
+        breakpoints="true">
+        <breakpoint size="0" direction="horizontal" space-between="4" slides-per-view="4" looped-slides="4">
+        </breakpoint>
+        <breakpoint size="1200" direction="vertical" slides-per-view="5" looped-slides="5" space-between="0">
+        </breakpoint>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for media in product.media %}
+                    <div class="swiper-slide">
+                        {{ media.preview_image | image_url: width: 83, height: 105 | image_tag:
+                            loading: lazy,
+                            sizes: sizes,
+                            class : 'img-fluid'
+                        }}
+                      </div>
+                {% endfor %}
+            </div>
+        </div>
+    </swiper-container>
+
+    <swiper-container class="product-gallery" loop="true" centered-slides="false" thumbs=".product-thumbs"
+        looped-slides="5" slides-per-view="1" initial-slide="{{ product.selected_or_first_available_variant.featured_media.position | minus: 1 }}">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% for media in product.media %}
+                    <div class="swiper-slide"  data-fancybox="gallery" data-src="{{media.preview_image | image_url: width: 1200, height: 1200 }}">
+                        {{ media.preview_image | image_url: width: 600, height: 800 | image_tag:
+                            loading: lazy,
+                            sizes: sizes,
+                            class : 'img-fluid'
+                        }}
+                      </div>
+                {% endfor %}
+            </div>
+        </div>
+    </swiper-container>
+</div>

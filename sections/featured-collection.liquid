@@ -8,7 +8,7 @@
                 
                 {% for block in section.blocks %}
                     {% assign card_collection = block.settings.collection %}
-                <tab-menu-item content="tab-{{forloop.index}}" {% if forloop.first %} active {% endif%}>{{card_collection.title}}</tab-menu-item>
+                <tab-menu-item content="tab-{{forloop.index}}" {% if forloop.first %} active {% endif %}>{{card_collection.title}}</tab-menu-item>
                 {% endfor %}
             </tab-menu>
           
