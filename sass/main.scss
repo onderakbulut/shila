@@ -1,3 +1,4 @@
+/*! purgecss start ignore */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,3 +6,12 @@
 body {
     @apply tw-text-2xl;
 }
+
+.button {
+    @apply tw-py-[19px];
+    &--black {
+        @apply tw-bg-black tw-text-white;
+    }
+}
+
+/*! purgecss end ignore */

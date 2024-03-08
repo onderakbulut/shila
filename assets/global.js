@@ -996,15 +996,27 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
 
-    const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
-    mediaGalleries.forEach((mediaGallery) =>
-      mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true)
-    );
+    var productSlider =  document.querySelector('.product-gallery');
+    if(productSlider.getAttribute('loop')){
+      productSlider.slideToLoop(this.currentVariant.featured_media.position - 1);
+    }
+    else {
+      productSlider.slideTo(this.currentVariant.featured_media.position - 1);
+    }
 
-    const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
-    if (!modalContent) return;
-    const newMediaModal = modalContent.querySelector(`[data-media-id="${this.currentVariant.featured_media.id}"]`);
-    modalContent.prepend(newMediaModal);
+    const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
+
+    if(mediaGalleries){
+    
+      mediaGalleries.forEach((mediaGallery) =>
+        mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true)
+      );
+
+      const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
+      if (!modalContent) return;
+      const newMediaModal = modalContent.querySelector(`[data-media-id="${this.currentVariant.featured_media.id}"]`);
+      modalContent.prepend(newMediaModal);
+    }
   }
 
   updateURL() {
@@ -1350,6 +1362,7 @@ class SwiperContainer extends HTMLElement {
           breakpoints: false,
           slidesPerGroup : 1,
           delay : 2000,
+          initialSlide : 0,
       };
 
       this.init();
@@ -1360,7 +1373,7 @@ class SwiperContainer extends HTMLElement {
       let el = this.querySelector('.swiper');
       let options = this.getOptions();
 
-      var swiper = new Swiper(el, options)
+      this.swiper = new Swiper(el, options)
 
       if (this.querySelector('[data-fancybox]')) {
           window.Fancybox.bind('[data-fancybox]', {
@@ -1383,13 +1396,14 @@ class SwiperContainer extends HTMLElement {
               on: {
                   close: (fancybox, slide) => {
                       const index = fancybox.getSlide().index
-                      swiper.slideToLoop(index)
+                      this.swiper.slideToLoop(index)
                   }
               }
           })
 
       }
   }
+
   getOptions = () => {
       let options = {};
       for (let key in this.defaultOptions) {
@@ -1465,8 +1479,15 @@ class SwiperContainer extends HTMLElement {
               }
           }
       }
-      console.log(options);
       return options;
+  }
+
+  slideTo = (n) => {
+      this.swiper.slideTo(n);
+  }
+
+  slideToLoop = (n) => {
+    this.swiper.slideToLoop(n);
   }
 
   camelCaseToKebabCase = (str) => str
@@ -1477,15 +1498,3 @@ class SwiperContainer extends HTMLElement {
       .join('');
 }
 customElements.define('swiper-container', SwiperContainer);
-
-
-
-if (document.querySelector('.js-image-zoom')) {
-  document.querySelectorAll('.js-image-zoom').forEach((item) => {
-      new Drift(item, {
-          paneContainer: item,
-          zoomFactor: 2,
-          sourceAttribute: 'data-src',
-      });
-  });
-}
