@@ -1154,7 +1154,6 @@ deferred-media {
 
 .button,
 .shopify-challenge__button,
-.customer button,
 button.shopify-payment-button__button--unbranded,
 .shopify-payment-button [role='button'],
 .cart__dynamic-checkout-buttons [role='button'],
@@ -1180,8 +1179,7 @@ button.shopify-payment-button__button--unbranded,
 }
 
 .button,
-.shopify-challenge__button,
-.customer button {
+.shopify-challenge__button {
   display: inline-flex;
   justify-content: center;
   align-items: center;

@@ -27,27 +27,27 @@
         }
         :hover {
             .icon-arrow {
-                @apply tw-w-7;
+                @apply tw-w-9;
             }
             .icon-play {
-                @apply tw-w-5;
+                @apply tw-w-7;
             }
         }
     }
     &__heading {
         @apply tw-text-xl tw-text-white tw-font-semibold tw-row-start-2 tw-text-center;
-        @apply md:tw-text-4xl;
+        @apply md:tw-text-5xl;
     }
     &__link {
         @apply tw-row-start-3 tw-w-10 tw-h-10 tw-rounded-full tw-bg-white tw-flex tw-items-center tw-justify-center tw-ms-auto tw-mt-auto tw-mr-[10px] tw-mb-[10px];
-        @apply xl:tw-w-20 xl:tw-h-20 xl:tw-mr-5 xl:tw-mb-5;
+        @apply xl:tw-w-32 xl:tw-h-32 xl:tw-mr-5 xl:tw-mb-5;
         .icon-arrow {
             @apply tw-w-4;
-            @apply xl:tw-w-6;
+            @apply xl:tw-w-7;
         }
         .icon-play {
             @apply tw-w-3;
-            @apply xl:tw-w-4;
+            @apply xl:tw-w-5;
         }
         .icon {
             @apply tw-duration-200;

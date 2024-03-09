@@ -488,6 +488,10 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+#WebPixelsManagerSandboxContainer {
+  display: none;
+}
+
 @media (max-width: 749px) {
   .max-md\:tw-hidden {
     display: none;

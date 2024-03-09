@@ -6,6 +6,10 @@
   margin-bottom: 3rem;
 }
 
+.main-page p {
+  margin-bottom: 12px;
+}
+
 @media screen and (min-width: 750px) {
   .main-page-title {
     margin-bottom: 4rem;
@@ -21,3 +25,4 @@
   width: 52.5rem;
   height: 52.5rem;
 }
+
