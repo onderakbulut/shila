@@ -286,7 +286,7 @@
                                         | escape
                                       -}}
                                     </span>
-                                    {% render 'icon-minus' %}
+                                    {% render 'icon-triangle-down' %}
                                   </button>
                                   <input
                                     class="quantity__input"
@@ -314,7 +314,7 @@
                                         | escape
                                       -}}
                                     </span>
-                                    {% render 'icon-plus' %}
+                                    {% render 'icon-triangle-up' %}
                                   </button>
                                 </quantity-input>
                               </div>
@@ -513,18 +513,17 @@
             </button>
           </noscript>
 
-          <button
+          <a
+            href="{{ routes.cart_url }}"
             type="submit"
             id="CartDrawer-Checkout"
             class="cart__checkout-button button"
-            name="checkout"
-            form="CartDrawer-Form"
             {% if cart == empty %}
               disabled
             {% endif %}
           >
             {{ 'sections.cart.checkout' | t }}
-          </button>
+          </a>
         </div>
       </div>
     </div>

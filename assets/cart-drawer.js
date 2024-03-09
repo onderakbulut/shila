@@ -12,6 +12,9 @@ class CartDrawer extends HTMLElement {
     cartLink.setAttribute('role', 'button');
     cartLink.setAttribute('aria-haspopup', 'dialog');
     cartLink.addEventListener('click', (event) => {
+      if (cartLink.classList.contains('-disabled'))
+      return;
+    
       event.preventDefault();
       this.open(cartLink);
     });

@@ -1,0 +1,39 @@
+{{ 'collection-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-banner page-width">
+    <div class="collection-banner__inner color-{{ section.settings.color_scheme }}">
+        <div class="collection-banner__title">
+            {{- section.settings.heading | escape -}}
+        </div>
+       
+    </div>
+</div>
+{% schema %}
+    {
+        "name": "Background Banner",
+        "class": "section",
+        "settings": [
+            {
+                "type": "paragraph",
+                "content": "t:sections.main-collection-banner.settings.paragraph.content"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Heading"
+            },
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "t:sections.all.colors.label",
+                "default": "scheme-1"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Background Banner"
+            }
+        ]
+    }
+{% endschema %}
