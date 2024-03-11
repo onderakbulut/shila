@@ -1,3 +1,7 @@
+localization-form {
+  display: flex;
+  justify-content: center;
+}
 .localization-form {
   display: flex;
   flex-direction: column;
@@ -31,7 +35,6 @@
   .localization-form:only-child {
     justify-content: start;
     width: auto;
-    margin: 0 1rem 0 0;
   }
 
   .localization-form:only-child .button,

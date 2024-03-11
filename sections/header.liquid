@@ -172,7 +172,7 @@
                 }}
               </div>
             {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
+              {% render 'logo' %}
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
@@ -212,7 +212,7 @@
                 }}
               </div>
             {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
+              {% render 'logo' %}
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
@@ -240,14 +240,6 @@
             {%- endform -%}
           </noscript>
 
-          {% comment %} <localization-form class="small-hide medium-hide no-js-hidden">
-            {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
-                {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
-              </div>
-            {%- endform -%}
-          </localization-form> {% endcomment %}
         {% endif %}
 
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}

@@ -6,7 +6,7 @@
         "template--21778208522547__5ce8bd68-c747-494d-9de7-ca935060df43-slide-1": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner-1_e4c3aae1-ea30-4d4f-b391-7ad08275eada.jpg",
+            "image": "shopify:\/\/shop_images\/slide1.jpg",
             "heading": "New collection",
             "heading_size": "h5",
             "subheading": "",
@@ -21,12 +21,13 @@
         "template--21778208522547__5ce8bd68-c747-494d-9de7-ca935060df43-slide-2": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/slide2.jpg",
             "heading": "Image slide",
             "heading_size": "h5",
             "subheading": "Tell your brand's story through images",
             "button_label": "Button label",
             "link": "",
-            "box_align": "middle-center",
+            "box_align": "middle-right",
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "text_alignment_mobile": "center"
@@ -52,7 +53,7 @@
         "image_mKBaBk": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/left-banner_14756f95-cb63-4998-b2b8-77d39540e0dd.jpg",
+            "image": "shopify:\/\/shop_images\/left-banner.jpg",
             "heading": "New Textures",
             "link": ""
           }
@@ -60,13 +61,13 @@
         "collection_Pj7krc": {
           "type": "collection",
           "settings": {
-            "collection": "babies"
+            "collection": "tote-bags"
           }
         },
         "image_Qejczq": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/right-banner_07c18c2d-a797-48a1-8ce0-64621980384b.jpg",
+            "image": "shopify:\/\/shop_images\/right-banner.jpg",
             "heading": "New Textures",
             "link": ""
           }
@@ -119,13 +120,13 @@
         "collection_JAqWdp": {
           "type": "collection",
           "settings": {
-            "collection": "men"
+            "collection": "bags"
           }
         },
         "collection_M9CDdq": {
           "type": "collection",
           "settings": {
-            "collection": "latest"
+            "collection": "shoes"
           }
         }
       },
